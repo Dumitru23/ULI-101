@@ -1,0 +1,27 @@
+week 4 review
+Fill in the following blanks:
+When dealing with the symbolic method, only change the exact items needed, and don't use = to assign permissions.
+======== means not applicable
+
+file name(s)		before		after		chmod with absolute method		chmod with symbolic method
+f1			-rw-r-----	-rwxr-xr--	
+d1			d---rwx-wx	dr-xr----x	
+f2			========			chmod 504 f2				========
+d2			dr-x--xrwx								chmod ug-x,o-rwx d2
+
+If you run the command umask 123, what will the permissions be for 
+new files: 
+new directories: 
+
+If new files created have the permissions -rw-r---w- and all new directories have the permissions drwxr-x-wx, what must the umask command have been?
+
+What is the command to set the permissions for directory d3 to pass-through only for all users, using the octal method?
+
+
+Complete the following number conversions in any way you choose (the base is shown in () in each case. You can do the conversions in any order you choose where there are more than one on a line.
+1100011010010111(2)  =           (8)
+1100011010010111(2)  =           (16)
+3AB7FE(16) =                 	(2)
+47(8) =       	(10) =        	(2) =         (16) 
+63(10) =      	(2)  =         	(8) =         (16)
+
