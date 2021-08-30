@@ -1,0 +1,113 @@
+Week 3 review
+Instructions:
+The following questions are similar to those you may find on the midterm and final.
+It is intended that you complete the questions without first creating the tree and then
+ experimenting with it, since you will not have such opportunity during the tests.
+Open this exercise in VI and type your answers in the space provided.
+Do not check your answers until you have attempted all questions.
+Use the following tree for each question.
+Each question is independent of the others.
+Regular files have names beginning with f, e.g. f1 etc. All other items are directories
+.
+Your username is joe for this exercise.
+The tree is repeated here to make it easier to check your answers.
+
+/
+└── home
+	└── joe
+		├── blue
+		│   └── green
+		│       └── red
+		│           └── f1
+		└── white
+		    ├── black
+		    │   ├── green
+		    │   └── red
+		    │       └── f2
+		    └── pink
+
+1. Write the command to copy f1 to black/green
+
+relative (pwd = blue/green)
+cp red/f1 ../../white/black/green
+
+absolute
+cp /home/joe/blue/green/red/f1 /home/joe/white/black/green
+
+relative-to-home
+cp ~/blue/green/red/f1 ~/white/black/green
+/
+└── home
+	└── joe
+		├── blue
+		│   └── green
+		│       └── red
+		│           └── f1
+		└── white
+		    ├── black
+		    │   ├── green
+		    │   └── red
+		    │       └── f2
+		    └── pink
+
+2. Write the command to copy f2 to pink
+
+relative (pwd = pink)
+cp ../black/red/f2 .
+
+absolute
+cp /home/joe/white/black/red/f2 /home/joe/white/pink
+
+relative-to-home
+cp ~/white/black/red/f2 ~/white/pink
+
+/
+└── home
+	└── joe
+		├── blue
+		│   └── green
+		│       └── red
+		│           └── f1
+		└── white
+		    ├── black
+		    │   ├── green
+		    │   └── red
+		    │       └── f2
+		    └── pink
+
+3. Write the command to copy black and all its contents to green/red
+
+relative (pwd = blue)
+cp -r ../white/black green/red
+
+absolute
+cp -r /home/joe/white/black /home/joe/blue/green/red
+
+relative-to-home
+cp -r ~/white/black ~/blue/green/red
+
+
+For the purpose of the following questions, the commands for each question are all exec
+uted while the current directory contains the following files:
+1.f    2.f  6.f  f1       f1.txt  f4.txt  file3.txt  t.xt
+1text  3.f  f    f1.text  f2      f-a     text1
+Use wildcards where ever possible.
+
+You can find the answers for yourself by experimenting with the wildcards directory, which you can copy to your own account from ~john.samuel/useful_files/wildcards
+
+4. Write the command to list just the files that end in .f
+
+5. Write the command to list just the files that contain 3 characters.
+
+6. What filenames will be printed by the command
+ls ?.[0-9]
+
+7. What filenames will be printed by the command
+ls [1t]*[1t]
+(that is a one and a tee in the square brackets)
+
+8. What filenames will be printed by the command
+ls *e*
+
+9. What command will print only the files in the current directory that have exactly 2 characters, and the last character is a digit?
+
