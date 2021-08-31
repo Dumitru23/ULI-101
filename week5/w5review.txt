@@ -1,0 +1,22 @@
+Write a single command to do all of the following:
+
+Take columns 2 and 4 from people.csv (check the file in data_files to see the format)
+Sort in reverse alphabetical order
+Take top 10 lines
+Take bottom 3 lines
+Get only lines with "joe" in them
+Redirect standard output to "out.txt"
+Append any error messages to the "black hole"
+
+
+
+Write a single command to do all of the following:
+
+Sort people.csv by column 2 in alphabetical order
+Take columns 1 and 3-5 from the output of the previous command
+Take top 10 lines
+Save the output to this point in a file named temp (remember 'tee')
+Get only lines that do not have "joe" in them, including line numbers, case insensitive
+Append standard output to "out.txt"
+Redirect any error messages to the same place as where standard output goes (remember the special syntax)
+
