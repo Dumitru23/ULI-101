@@ -1,0 +1,73 @@
+sed and awk practice
+
+sed
+The following questions use a file called new_inventory and you can find it in
+the same directory as this exercise.
+You can copy this file and use this file to verify your answers and experiment.
+You must write your answers so that they would work with additional or different data, don't tailor them to just these records.
+The columns are
+id #, product name, number on hand, reorder level
+
+1. Print just lines 3-6 of the file.
+
+
+2. Print all the lines up to and including the first occurence of Compote and then quit.
+
+
+3. Print all the lines except lines 2-4.
+
+
+4. Substitute all the vowels on lines 4-6 with X and print only the affected lines.
+
+
+5. Change all uppercase letters to lowercase.
+
+
+6. Write the id#s of the lines printed by the following command
+sed '5 q' new_inventory
+
+
+7. Write the id#s of the lines printed by the following command
+sed '1,6 d' new_inventory
+
+
+8. Write the id#s of the lines printed by the following command
+sed '/^[A-M]/ p' new_inventory
+
+
+9. Write the id#s of the lines printed by the following command
+sed '/[A-M]/ p' new_inventory
+
+
+
+awk
+The following questions use a file called cars2 and you can find it in
+the same directory as this exercise.
+You can copy this file and use this file to verify your answers and experiment.
+You must write your answers so that they would work with additional or different data, don't tailor them to just these records.
+The columns are
+id #, make, model, year (missing the 19), kilometers (in thousands), cost
+
+10. Write the command to format the data in the file so that it will display data from all lines in the following format (first line shown as an example)
+The cost of a 1977 plym fury with 73000 kilometers is $2500.
+
+
+
+11. Add a filter to the above formatting so that it only prints the above formatted output for the entries that have less than 50000 km.
+
+
+
+12. Modify the above command so that it only prints the above formatted output for the entries that have less than 50000 km and cost less than 10000.
+
+
+
+13. Write the command to print all lines of the file (unformated) whose model starts with any letter from d-k and whose year ends with an odd digit.
+
+
+14. Write the id#s of the lines printed by the following command
+awk '$4 > 80 || $5 < 20' cars2
+
+
+15. Write exactly what will be printed by the following command
+awk '$4>64 && $4<77 {print "the year is " $4 " and the mileage is " $5}' cars2
+

@@ -1,0 +1,71 @@
+Regex practice
+
+The following questions use a file called new_inventory and you can find it in
+the same directory as this exercise.
+You can copy this file and use this file to verify your answers and experiment.
+You must write your answers so that they would work with additional or different data, don't tailor them to just these records.
+The columns are 
+id #, product name, number on hand, reorder level
+
+1. Print just the lines of the file that have an id # from 3-6 inclusive.
+
+grep "^[3-6]" new_inventory
+
+
+2. Print just the lines where the product name starts with an uppercase letter between A and L.
+
+grep ".*,[A-L]" new_inventory
+
+
+3. Print the lines that have Strawberry or Raspberry in the line.
+
+egrep "(Strawberry|Raspberry)" new_inventory
+
+
+4. Print the lines that do not have berry in the line.
+
+grep -v "berry" new_inventory
+
+
+5. Print the lines where the product name starts with a letter from M to Z, and the number on hand starts with a 1 or 2 and the number on hand ends with a number from 4 to 9.
+
+grep ".*,[M-Z].*,[1-2].*[4-9],.*" new_inventory
+
+
+
+6. Which lines will be printed by the following (just write the id#s)?
+grep "^2-5" new_inventory
+nothing
+
+
+7. What will be printed by the following (write exactly what you would see on the screen)?
+grep "^[^1-4]" new_inventory
+
+5,Raspberry Compote,1937,624
+6,Blueberry compote,200,625
+7,Frozen Strawberries,130,1921
+8,Straw Hats,16,2047
+
+
+8.  What will be printed by the following (write exactly what you would see on the screen)?
+grep ".*,.*,[89]" new_inventory
+
+3,Blueberry Jam,96,195
+
+9. Which lines will be printed by the following (just write the id#s)?
+grep "(Straw|Blue)" new_inventory
+
+nothing must be egrep
+
+
+10. Which lines will be printed by the following (just write the id#s)?
+egrep "(Straw|Blue)" new_inventory
+
+1,3,4,6,7,8
+
+
+
+
+
+
+
